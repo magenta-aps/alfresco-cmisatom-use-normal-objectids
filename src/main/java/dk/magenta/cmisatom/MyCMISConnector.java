@@ -6,6 +6,10 @@ import org.alfresco.service.cmr.repository.NodeRef;
 
 /**
  * Created by syastrov on 11/10/15.
+ *
+ * Always drop the store refs (e.g. "workspace://SpacesStore/") from the CMIS
+ * objectIds. This is to allow the /alfresco/cmisatom endpoint to function
+ * similar to the "public API" CMIS endpoints.
  */
 public class MyCMISConnector extends CMISConnector {
     @Override
